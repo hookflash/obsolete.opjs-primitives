@@ -1,6 +1,6 @@
 
-const SERVER = require("../server");
-const GRUNT = require("grunt");
+const SERVER = require("../test-server/server");
+const GRUNT = require("../test-server/node_modules/grunt");
 
 
 describe("run-ui-tests", function() {
@@ -28,7 +28,7 @@ describe("run-ui-tests", function() {
                 }
             });
 
-            GRUNT.loadNpmTasks("grunt-mocha");
+            GRUNT.loadNpmTasks("../test-server/node_modules/grunt-mocha");
 
             GRUNT.registerInitTask('default', function() {
                 GRUNT.task.run(["mocha"]);

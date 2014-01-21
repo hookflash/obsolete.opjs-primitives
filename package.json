@@ -1,6 +1,6 @@
 {
-    "name": "openpeer",
-    "version": "0.1.4",
+    "name": "opjs-primitives",
+    "version": "0.1.0",
     "pm": "npm",
     "dependencies": {
         "cifre": "~0.0.8"
@@ -10,7 +10,7 @@
     },
     "config": {
         "run": {
-            "packagePath": "dev"
+            "packagePath": "test-server"
         }
     }
 }

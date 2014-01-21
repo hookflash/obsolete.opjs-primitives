@@ -1,27 +1,20 @@
 *Status: DEV*
 
-Open Peer SDK for JavaScript
-============================
+OpenPeer JavaScript Primitives Library
+======================================
 
-WebRTC P2P signalling, federated identities and more.
+This library contains the JavaScript primitives needed to build JavaScript implementations of the [OpenPeer Protocol](http://docs.openpeer.org/OpenPeerProtocolSpecification).
 
-Based on the following specifications:
+The library features:
 
-  * [Open Peer Protocol](http://docs.openpeer.org/OpenPeerProtocolSpecification)
-  * [WebRTC 1.0: Real-time Communication Between Browsers](http://dev.w3.org/2011/webrtc/editor/webrtc.html)
-
-For sample integration see: https://github.com/openpeer/opjs-demo
-
-Usage
------
-
-*TODO: Instructions on how to use the SDK*
+  * Cryptographic compatibility with Java, PHP and C implementations.
+  * Runnable in NodeJS and Browser.
 
 
 Development
 -----------
 
-Development of this SDK is done via a development UI:
+Dev UI:
 
     make install
     make run

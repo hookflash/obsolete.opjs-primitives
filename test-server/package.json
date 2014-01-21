@@ -1,5 +1,5 @@
 {
-    "name": "opjs2-dev",
+    "name": "opjs-primitives-test-server",
     "version": "0.0.0",
     "private": true,
     "main": "server.js",
