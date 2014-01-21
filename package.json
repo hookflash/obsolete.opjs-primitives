@@ -1,0 +1,16 @@
+{
+    "name": "openpeer",
+    "version": "0.1.4",
+    "pm": "npm",
+    "dependencies": {
+        "cifre": "~0.0.8"
+    },
+    "devDependencies": {
+        "amdefine": "~0.0.4"
+    },
+    "config": {
+        "run": {
+            "packagePath": "dev"
+        }
+    }
+}
