@@ -19,6 +19,6 @@ publish:
 	rm -Rf .dist/node_modules
 	rm -Rf .dist/test-server/node_modules
 	rm -Rf .dist/test-server/helpers/*/node_modules
-#	cd .dist; npm publish
+	cd .dist; npm publish
 
 .PHONY: install test run publish
