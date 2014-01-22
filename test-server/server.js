@@ -31,18 +31,6 @@ exports.main = function(callback) {
         require("./helpers/bootstrapper").hook({
             host: "localhost:" + PORT
         }, app);
-        require("./helpers/identity").hook({
-            host: "localhost:" + PORT
-        }, app);
-        require("./helpers/namespace").hook({
-            host: "localhost:" + PORT
-        }, app);
-        require("./helpers/lockbox").hook({
-            host: "localhost:" + PORT
-        }, app);
-        require("./helpers/rolodex").hook({
-            host: "localhost:" + PORT
-        }, app);
 
         var extraServers = [];
 
@@ -73,7 +61,7 @@ exports.main = function(callback) {
             mountStaticDir(app, /^\/ui\/(.*)$/, PATH.join(__dirname, "ui"));
             mountStaticDir(app, /^\/tests\/(.*)$/, PATH.join(__dirname, "../tests/browser"));
             mountStaticDir(app, /^\/mocks\/(.*)$/, PATH.join(__dirname, "mocks"));
-            mountStaticDir(app, /^\/lib\/opjs\/(.*)$/, PATH.join(__dirname, "../lib"));
+            mountStaticDir(app, /^\/lib\/opjs-primitives\/(.*)$/, PATH.join(__dirname, "../lib"));
             mountStaticDir(app, /^\/lib\/cifre\/(.*)$/, PATH.join(__dirname, "../node_modules/cifre"));
             mountStaticDir(app, /^\/lib\/q\/(.*)$/, PATH.join(__dirname, "node_modules/q"));
 

@@ -3,7 +3,7 @@
 
 	requirejs.config({
 		paths: {
-			opjs: "/lib/opjs",
+			"opjs-primitives": "/lib/opjs-primitives",
 			cifre: "/lib/cifre",
 			q: "/lib/q",
 			tests: "/tests",
@@ -17,7 +17,7 @@
 
 	require([
 		"q/q",
-		"opjs/assert"
+		"opjs-primitives/assert"
 	], function(Q, Assert) {
 
 		window.HELPERS = {
@@ -27,33 +27,6 @@
 				 	return callback(null, data);
 				 })
 				 .fail(callback);
-			},
-			ensureNoConnections: function(callback) {
-				function check(callback) {
-					try {
-						return window.HELPERS.callServerHelper("finder-server/connection-count", {}, function(err, count) {
-							if (err) return callback(err);
-							if (parseInt(count) === 0) return callback(null);
-							return callback(true);
-						});
-					} catch(err) {
-						return callback(err);
-					}
-				}
-				var waitCount = 0;
-				var waitId = setInterval(function() {
-					if (waitCount > 10) {
-						clearInterval(waitId);
-						return callback(new Error("Connection count != 0"));
-					}
-					waitCount += 1;
-					return check(function(err) {
-						if (err === null) {
-							clearInterval(waitId);
-							return callback(null);
-						}
-					});
-				}, 100);
 			}
 		}
 
