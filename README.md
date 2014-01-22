@@ -11,6 +11,12 @@ The library features:
   * Runnable in NodeJS and Browser.
 
 
+Install
+-------
+
+    npm install opjs-primitives
+
+
 Development
 -----------
 
