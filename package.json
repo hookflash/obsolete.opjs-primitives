@@ -3,14 +3,15 @@
     "version": "0.1.0",
     "pm": "npm",
     "dependencies": {
-        "cifre": "~0.0.8"
-    },
-    "devDependencies": {
-        "amdefine": "~0.0.4"
+        "cifre": "~0.0.8",
+        "amdefine": "~0.1.0"
     },
     "config": {
         "run": {
             "packagePath": "test-server"
+        },
+        "pio.deploy.converter": {
+            "name": "nodejs-lib"
         }
     }
 }
